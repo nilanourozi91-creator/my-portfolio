@@ -1,0 +1,43 @@
+export type cart={
+    cartname:string,
+    name:string,
+}
+const card:cart[]=[
+    {
+        cartname:'BootsRap',
+        name:'BootsRap',
+    },
+     {
+        cartname:'javascript',
+        name:'javascript',
+    },
+     {
+        cartname:'react.js',
+        name:'react.js',
+    },
+     {
+        cartname:'next.js',
+        name:'next.js',
+    },
+     {
+        cartname:'php',
+        name:'php',
+    },
+     {
+        cartname:'postgresql',
+        name:'postgresql',
+    },
+     {
+        cartname:'mysql',
+        name:'mysql',
+    },
+     {
+        cartname:'laravel',
+        name:'laravel',
+    },
+     {
+        cartname:'tailwindcss',
+        name:'tailwindcss',
+    },
+]
+export default card;

@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+   --background:rgb(23, 1, 46);
+    --foreground: #ededed;
+    ---bg-black:black;
+    --bg-button: rgb(56, 20, 114) ;
+    --text-banner: rgb(90, 48, 158) ;
 }
 
 @theme inline {
@@ -14,13 +17,46 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background:rgb(14, 1, 26);
     --foreground: #ededed;
+    --text-banner: rgb(90, 48, 158) ;
   }
 }
+@property --degree{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+  
+}
+@layer components{
+  .bg-bg{
+      background-image:linear-gradient( 20deg,rgb(90, 48, 158),rgb(90, 48, 158) ,rgb(99, 77, 123));
+     box-shadow: 0px 0px 3px white;
+  }
+ .moto{
+   color: transparent;
+   background-clip: text;
+   background-image:conic-gradient(from var(--degree),rgb(90, 48, 158),rgb(175, 174, 174),rgb(90, 48, 158) ,white);
+   animation: rotatebg 3s infinite linear;
+ }
+ @keyframes rotatebg{
+  from{
+    --degree:0deg;
+  }
+  to{
+     --degree:360deg;
+  }
+ }
+
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+ 
+   
+  
 }
+
